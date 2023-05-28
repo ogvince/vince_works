@@ -8,6 +8,12 @@
 
 
 <style lang="scss">
+* {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 body{
   margin: 0;
   padding: 0;
