@@ -2,7 +2,7 @@
     <header>
 
         <div id="vince_works-logo" @click="closeAll">
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.026 57.214">
+            <svg id="text-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.026 57.214">
                 <g id="logo">
                   <g>
                     <g>
@@ -21,6 +21,10 @@
                     <path class="cls-1" d="M219.419,57.214H28.607C12.833,57.214,0,44.381,0,28.607S12.833,0,28.607,0H219.419c15.774,0,28.607,12.833,28.607,28.607s-12.833,28.607-28.607,28.607ZM28.607,4.015C15.048,4.015,4.017,15.047,4.017,28.606s11.031,24.59,24.59,24.59H219.419c13.559,0,24.59-11.031,24.59-24.59s-11.031-24.59-24.59-24.59H28.607Z"/>
                   </g>
                 </g>
+              </svg>
+
+              <svg id="circle-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98">
+                <path class="cls-1" d="M49,0C21.98,0,0,21.98,0,49s21.98,49,49,49,49-21.98,49-49c-.009-27.02-21.99-49-49-49Zm0,83.084v11.086h0c-24.903,0-45.161-20.258-45.161-45.161H14.925c-.009,18.81,15.246,34.075,34.075,34.075v-26.452c4.215,0,7.632-3.418,7.632-7.632h-7.632v7.632c-4.215,0-7.632-3.418-7.632-7.632h7.632v-7.632c-4.215,0-7.632,3.418-7.632,7.632H14.916c0-18.819,15.255-34.084,34.084-34.084v26.452c4.215,0,7.632,3.418,7.632,7.632h26.452c0-18.819-15.255-34.084-34.084-34.084V3.83c24.903,0,45.161,20.258,45.161,45.161h-11.086c0,18.829-15.255,34.093-34.075,34.093Z"/>
               </svg>
         </div>
 
@@ -172,8 +176,10 @@ border-radius: 5px;
     font-family: "Lausanne 500";
   }
 
-
-  @media screen and (max-width: 900px) {
+  #circle-logo{
+    display: none;
+  }
+  @media screen and (max-width: 450px) {
     header {
       position: fixed;
       top: 10px;
@@ -199,5 +205,21 @@ border-radius: 5px;
     font-family: "Lausanne 500";
   }
 
+  }
+  @media screen and (max-width: 320px) {
+    #circle-logo{
+      display: block;
+    }
+    #text-logo{
+      display: none;
+    }
+
+
+  }
+
+  @media screen and (max-width: 160px) {
+header{
+  display: none;
+}
   }
   </style>
