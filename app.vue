@@ -17,11 +17,17 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+  box-sizing: border-box;
 }
 
 body{
   margin: 0;
   padding: 0;
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 @font-face {
   font-family: "Lausanne 500";
@@ -38,5 +44,7 @@ body{
   font-style: normal;
   font-display: swap;
 }
+
+
 
 </style>
