@@ -1,5 +1,10 @@
 <template>
-  <div>
+<!-- Welcome to my website - hello@vince.works -->
+  <div id="vince_works">
+    <Head>
+      <Title>hello@vince.works</Title>
+   </Head>
+    <Loader/>
     <Header/>
     <NuxtPage />
   </div>

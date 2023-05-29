@@ -1,7 +1,7 @@
 <template>
     <header>
 
-        <div id="vince_works-logo">
+        <div id="vince_works-logo" @click="closeAll">
             <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.026 57.214">
                 <g id="logo">
                   <g>
@@ -37,7 +37,7 @@
 
 
           <div v-if="menuOpen" class="overlay-menu">
-            <span>ART + PRINT + WEB</span>
+            <span>Art + Print + Web</span>
           </div>
 
           <div v-if="mailOpen" class="overlay-menu">
@@ -62,9 +62,15 @@
         mailOpen.value = !mailOpen.value;
         menuOpen.value = false;
     };
+
+
+    const closeAll = () => {
+      mailOpen.value = false;
+        menuOpen.value = false;
+    };
   </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 
 .fade-enter-active, .fade-leave-active {
@@ -87,6 +93,7 @@ height:60px;
 border-radius: 5px;
 
 #vince_works-logo{
+  cursor:pointer;
     position: absolute;
     left: calc(50% - 100px);
     top:15%;
@@ -119,6 +126,7 @@ border-radius: 5px;
 }
 
 #vince_works-mail {
+    cursor: pointer;
     position: absolute;
     right: 10px;
     height: 100%;
