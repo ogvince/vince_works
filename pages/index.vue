@@ -10,6 +10,14 @@
   :keyboard="{
     enabled: true,
   }"
+  :breakpoints="{
+    '0': {
+      direction: 'vertical',
+    },
+    '900': {
+      direction: 'horizontal',
+    }
+  }"
   effect="fade">
   <swiper-slide>
     <img src="/images/slider/frames.jpg"/>
