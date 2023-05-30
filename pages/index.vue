@@ -63,9 +63,7 @@
       <swiper-slide v-if="isMobile">
         <img src="/images/slider/mobile/code.jpg"/>
       </swiper-slide>
-      <swiper-slide v-if="isMobile">
-        <img src="/images/slider/mobile/virgil.jpg"/>
-      </swiper-slide>
+
         <swiper-slide v-if="isMobile">
           <img src="/images/slider/mobile/screen-print.jpg"/>
         </swiper-slide>
