@@ -44,7 +44,19 @@ body{
   font-style: normal;
   font-display: swap;
 }
+a, a:visited, a:focus {
+  color:black;
+  text-decoration: none;
+}
 
-
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
 
 </style>

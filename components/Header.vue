@@ -2,6 +2,7 @@
     <header>
 
         <div id="vince_works-logo" @click="closeAll">
+          <NuxtLink to='/'>
             <svg id="text-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.026 57.214">
                 <g id="logo">
                   <g>
@@ -26,6 +27,7 @@
               <svg id="circle-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 98">
                 <path class="cls-1" d="M49,0C21.98,0,0,21.98,0,49s21.98,49,49,49,49-21.98,49-49c-.009-27.02-21.99-49-49-49Zm0,83.084v11.086h0c-24.903,0-45.161-20.258-45.161-45.161H14.925c-.009,18.81,15.246,34.075,34.075,34.075v-26.452c4.215,0,7.632-3.418,7.632-7.632h-7.632v7.632c-4.215,0-7.632-3.418-7.632-7.632h7.632v-7.632c-4.215,0-7.632,3.418-7.632,7.632H14.916c0-18.819,15.255-34.084,34.084-34.084v26.452c4.215,0,7.632,3.418,7.632,7.632h26.452c0-18.819-15.255-34.084-34.084-34.084V3.83c24.903,0,45.161,20.258,45.161,45.161h-11.086c0,18.829-15.255,34.093-34.075,34.093Z"/>
               </svg>
+            </NuxtLink>
         </div>
 
         <div @click="toggleMenu" class="menu-icon" id="vince_works-menu">
@@ -40,8 +42,8 @@
           </div>
 
 
-          <div v-if="menuOpen" class="overlay-menu">
-            <span>Art + Print + Web</span>
+          <div v-if="menuOpen" class="overlay-menu" @click="closeAll">
+            <NuxtLink to='/projects'>Art + Print + Web</NuxtLink>
           </div>
 
           <div v-if="mailOpen" class="overlay-menu">
