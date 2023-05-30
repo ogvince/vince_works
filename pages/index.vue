@@ -19,54 +19,80 @@
     }
   }"
   effect="fade">
-  <swiper-slide>
-    <img src="/images/slider/frames.jpg" v-if="isDesktop"/>
-    <img src="/images/slider/mobile/frames.jpg" v-if="isMobile"/>
+  <swiper-slide v-if="isDesktop">
+    <img src="/images/slider/frames.jpg"/>
   </swiper-slide>
-  <swiper-slide>
-    <img src="/images/slider/code.jpg" v-if="isDesktop"/>
-    <img src="/images/slider/mobile/code.jpg" v-if="isMobile"/>
+  <swiper-slide v-if="isDesktop">
+    <img src="/images/slider/code.jpg"/>
   </swiper-slide>
-  <swiper-slide>
-    <img src="/images/slider/virgil.jpg" v-if="isDesktop"/>
-    <img src="/images/slider/mobile/virgil.jpg" v-if="isMobile"/>
+  <swiper-slide v-if="isDesktop">
+    <img src="/images/slider/virgil.jpg"/>
   </swiper-slide>
-    <swiper-slide>
-      <img src="/images/slider/screen-print.jpg" v-if="isDesktop"/>
-      <img src="/images/slider/mobile/screen-print.jpg" v-if="isMobile"/>
+    <swiper-slide v-if="isDesktop">
+      <img src="/images/slider/screen-print.jpg"/>
     </swiper-slide>
-    <swiper-slide>
-      <img src="/images/slider/tower.jpg" v-if="isDesktop"/>
-      <img src="/images/slider/mobile/tower.jpg" v-if="isMobile"/>
+    <swiper-slide v-if="isDesktop">
+      <img src="/images/slider/tower.jpg"/>
     </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/saigon-bike.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/saigon-bike.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/saigon-bike.jpg"/>
       </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/colors.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/colors.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/colors.jpg"/>
       </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/pc.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/pc.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/pc.jpg"/>
       </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/tee.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/tee.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/tee.jpg"/>
       </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/hanoi-couple.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/hanoi-couple.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/hanoi-couple.jpg"/>
       </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/keyboard.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/keyboard.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/keyboard.jpg"/>
       </swiper-slide>
-      <swiper-slide>
-        <img src="/images/slider/artisan.jpg" v-if="isDesktop"/>
-        <img src="/images/slider/mobile/artisan.jpg" v-if="isMobile"/>
+      <swiper-slide v-if="isDesktop">
+        <img src="/images/slider/artisan.jpg"/>
       </swiper-slide>
+
+
+      <swiper-slide v-if="isMobile">
+        <img src="/images/slider/mobile/frames.jpg"/>
+      </swiper-slide>
+      <swiper-slide v-if="isMobile">
+        <img src="/images/slider/mobile/code.jpg"/>
+      </swiper-slide>
+      <swiper-slide v-if="isMobile">
+        <img src="/images/slider/mobile/virgil.jpg"/>
+      </swiper-slide>
+        <swiper-slide v-if="isMobile">
+          <img src="/images/slider/mobile/screen-print.jpg"/>
+        </swiper-slide>
+        <swiper-slide v-if="isMobile">
+          <img src="/images/slider/mobile/tower.jpg"/>
+        </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/saigon-bike.jpg"/>
+          </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/colors.jpg"/>
+          </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/pc.jpg"/>
+          </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/tee.jpg"/>
+          </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/hanoi-couple.jpg"/>
+          </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/keyboard.jpg"/>
+          </swiper-slide>
+          <swiper-slide v-if="isMobile">
+            <img src="/images/slider/mobile/artisan.jpg"/>
+          </swiper-slide>
 
     </swiper>
   </template>
@@ -91,7 +117,6 @@
 
   const modules = [Mousewheel, Keyboard, Autoplay, EffectFade];
   </script>
-
 
 <style lang="scss">
 .swiper{
