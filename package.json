@@ -13,6 +13,7 @@
     "nuxt": "^3.5.1"
   },
   "dependencies": {
+    "bowser": "^2.11.0",
     "gsap": "^3.11.5",
     "sass": "^1.62.1",
     "swiper": "^9.3.2"

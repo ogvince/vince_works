@@ -20,64 +20,78 @@
   }"
   effect="fade">
   <swiper-slide>
-    <img src="/images/slider/frames.jpg"/>
+    <img src="/images/slider/frames.jpg" v-if="isDesktop"/>
+    <img src="/images/slider/mobile/frames.jpg" v-if="isMobile"/>
   </swiper-slide>
   <swiper-slide>
-    <img src="/images/slider/code.jpg"/>
+    <img src="/images/slider/code.jpg" v-if="isDesktop"/>
+    <img src="/images/slider/mobile/code.jpg" v-if="isMobile"/>
   </swiper-slide>
   <swiper-slide>
-    <img src="/images/slider/virgil.jpg"/>
+    <img src="/images/slider/virgil.jpg" v-if="isDesktop"/>
+    <img src="/images/slider/mobile/virgil.jpg" v-if="isMobile"/>
   </swiper-slide>
     <swiper-slide>
-      <img src="/images/slider/screen-print.jpg"/>
+      <img src="/images/slider/screen-print.jpg" v-if="isDesktop"/>
+      <img src="/images/slider/mobile/screen-print.jpg" v-if="isMobile"/>
     </swiper-slide>
     <swiper-slide>
-      <img src="/images/slider/tower.jpg"/>
+      <img src="/images/slider/tower.jpg" v-if="isDesktop"/>
+      <img src="/images/slider/mobile/tower.jpg" v-if="isMobile"/>
     </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/saigon-bike.jpg"/>
+        <img src="/images/slider/saigon-bike.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/saigon-bike.jpg" v-if="isMobile"/>
       </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/colors.jpg"/>
+        <img src="/images/slider/colors.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/colors.jpg" v-if="isMobile"/>
       </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/pc.jpg"/>
+        <img src="/images/slider/pc.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/pc.jpg" v-if="isMobile"/>
       </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/tee.jpg"/>
+        <img src="/images/slider/tee.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/tee.jpg" v-if="isMobile"/>
       </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/hanoi-couple.jpg"/>
+        <img src="/images/slider/hanoi-couple.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/hanoi-couple.jpg" v-if="isMobile"/>
       </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/keyboard.jpg"/>
+        <img src="/images/slider/keyboard.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/keyboard.jpg" v-if="isMobile"/>
       </swiper-slide>
       <swiper-slide>
-        <img src="/images/slider/artisan.jpg"/>
+        <img src="/images/slider/artisan.jpg" v-if="isDesktop"/>
+        <img src="/images/slider/mobile/artisan.jpg" v-if="isMobile"/>
       </swiper-slide>
 
     </swiper>
   </template>
-  <script>
-
+  <script setup lang="ts">
   import { Mousewheel, Keyboard, Autoplay, EffectFade } from 'swiper';
   import { Swiper, SwiperSlide } from 'swiper/vue';
+  import { useDevice } from '@/composables/useDevice';
+  import { computed, ref } from 'vue';
 
   import 'swiper/css';
   import 'swiper/css/effect-fade';
 
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    setup() {
-      return {
-        modules: [Mousewheel, Keyboard, Autoplay, EffectFade],
-      };
-    },
-  };
+  const { deviceType, windowWidth } = useDevice();
+  const isDesktop = computed(() => windowWidth.value >= 700);
+  const isMobile = computed(() => windowWidth.value < 700);
+
+  // Swiper and SwiperSlide need to be exposed for the template to use them
+  const expose = {
+    Swiper,
+    SwiperSlide
+  }
+
+  const modules = [Mousewheel, Keyboard, Autoplay, EffectFade];
   </script>
+
 
 <style lang="scss">
 .swiper{
