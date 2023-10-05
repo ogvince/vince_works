@@ -47,9 +47,6 @@
         <img src="/images/slider/tee.jpg"/>
       </swiper-slide>
       <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/hanoi-couple.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isDesktop">
         <img src="/images/slider/keyboard.jpg"/>
       </swiper-slide>
       <swiper-slide v-if="isDesktop">
@@ -81,9 +78,6 @@
           </swiper-slide>
           <swiper-slide v-if="isMobile">
             <img src="/images/slider/mobile/tee.jpg"/>
-          </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/hanoi-couple.jpg"/>
           </swiper-slide>
           <swiper-slide v-if="isMobile">
             <img src="/images/slider/mobile/keyboard.jpg"/>
