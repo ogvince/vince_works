@@ -3,10 +3,6 @@
   :loop="true"
   :modules="modules"
   :mousewheel="true"
-  :autoplay="{
-    delay: 4500,
-    disableOnInteraction: false,
-  }"
   :keyboard="{
     enabled: true,
   }"
@@ -19,72 +15,12 @@
     }
   }"
   effect="fade">
-  <swiper-slide v-if="isDesktop">
-    <img src="/images/slider/frames.jpg"/>
+  <swiper-slide class="landing">
+    <video autoplay muted loop class="intro-video">
+      <source src="/videos/intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </swiper-slide>
-  <swiper-slide v-if="isDesktop">
-    <img src="/images/slider/code.jpg"/>
-  </swiper-slide>
-  <swiper-slide v-if="isDesktop">
-    <img src="/images/slider/virgil.jpg"/>
-  </swiper-slide>
-    <swiper-slide v-if="isDesktop">
-      <img src="/images/slider/screen-print.jpg"/>
-    </swiper-slide>
-    <swiper-slide v-if="isDesktop">
-      <img src="/images/slider/tower.jpg"/>
-    </swiper-slide>
-      <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/saigon-bike.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/colors.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/pc.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/tee.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/keyboard.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isDesktop">
-        <img src="/images/slider/artisan.jpg"/>
-      </swiper-slide>
-
-
-      <swiper-slide v-if="isMobile">
-        <img src="/images/slider/mobile/frames.jpg"/>
-      </swiper-slide>
-      <swiper-slide v-if="isMobile">
-        <img src="/images/slider/mobile/code.jpg"/>
-      </swiper-slide>
-
-        <swiper-slide v-if="isMobile">
-          <img src="/images/slider/mobile/screen-print.jpg"/>
-        </swiper-slide>
-        <swiper-slide v-if="isMobile">
-          <img src="/images/slider/mobile/tower.jpg"/>
-        </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/saigon-bike.jpg"/>
-          </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/colors.jpg"/>
-          </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/pc.jpg"/>
-          </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/tee.jpg"/>
-          </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/keyboard.jpg"/>
-          </swiper-slide>
-          <swiper-slide v-if="isMobile">
-            <img src="/images/slider/mobile/artisan.jpg"/>
-          </swiper-slide>
 
     </swiper>
   </template>
@@ -117,6 +53,9 @@
   .swiper-slide {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img{
       width: 100%;
       height:100%;
@@ -125,4 +64,15 @@
 }
 }
 
+
+
+.intro-video{
+  height:100%;
+  width:auto;
+  position: absolute;
+}
+
+.landing{
+  background: black;
+}
 </style>

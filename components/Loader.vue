@@ -36,18 +36,18 @@
     const tl = gsap.timeline();
 
     // PHASE 1: normal speed blink
-    tl.to(block.value, { autoAlpha: 0, duration: 0.26, repeat: 5, yoyo: true });
+    tl.to(block.value, { autoAlpha: 0, duration: 0.06, repeat: 5, yoyo: true });
 
     // PHASE 2: a little break, opacity 0 for a while
-    tl.to(block.value, { autoAlpha: 0, duration: 0.22 }) // Fast disappearance
+    tl.to(block.value, { autoAlpha: 0, duration: 0.01 }) // Fast disappearance
     //  .to(block.value, { duration: 0.10, delay: 0.10 }); // Adding delay of 1 second
 
     // PHASE 3: 3 fast blink
-    tl.to(block.value, { autoAlpha: 1, duration: 0.15, repeat: 5, yoyo: true, immediateRender: false });
-    tl.to(block.value, { autoAlpha: 1, duration: 0.03, repeat: 5, yoyo: true, immediateRender: false });
+    tl.to(block.value, { autoAlpha: 1, duration: 0.08, repeat: 5, yoyo: true, immediateRender: false });
+    tl.to(block.value, { autoAlpha: 1, duration: 0.02, repeat: 5, yoyo: true, immediateRender: false });
 
     // PHASE 4: Preloader FADE OFF with a delay of 500ms
-    tl.to(loader.value, { autoAlpha: 0, duration: 0.33, delay: 0.11 });
+    tl.to(loader.value, { autoAlpha: 0, duration: 0.16, delay: 0.05 });
   });
   </script>
 
@@ -75,7 +75,7 @@
     opacity: 1;
     svg{
       path{
-        fill:blue
+        fill:black
       }
     }
   }

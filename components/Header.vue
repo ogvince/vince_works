@@ -93,7 +93,7 @@ position:fixed;
 top:10px;
 left: calc(50vw - 220px);
 z-index: 1000;
-background: blue;
+background: black;
 width: 440px;
 height:60px;
 border-radius: 5px;
@@ -181,13 +181,13 @@ border-radius: 5px;
   #circle-logo{
     display: none;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 700px) {
     header {
       position: fixed;
       top: 10px;
       left: 10px;
       z-index: 1000;
-      background: blue;
+      background: black;
       width: calc(100vw - 20px);
       height: 60px;
       border-radius: 5px;
@@ -224,4 +224,7 @@ header{
   display: none;
 }
   }
+
+
+ 
   </style>
