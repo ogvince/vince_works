@@ -29,17 +29,17 @@
       </section>
 
       <section>
-        <p><strong>Selected teams & collaborations :</strong></p>
+        <p>Selected teams & collaborations :</p>
         <ul>
-          <li>Art direction + development — @madandwomen</li>
-          <li>Developer — @nemaprod</li>
-          <li>Developer — @applecore</li>
-          <li>Developer — @heidisparis</li>
-          <li>Project manager — @adveris</li>
-          <li>Developer — @neueweb</li>
-          <li>Art direction — @mamamusicandconvention</li>
-          <li>Art direction + development — @bleu.mercure</li>
-          <li>Art direction + development — @riadra_org</li>
+          <li>-Art direction + development — @madandwomen</li>
+          <li>-Developer — @nemaprod</li>
+          <li>-Developer — @applecore</li>
+          <li>-Developer — @heidisparis</li>
+          <li>-Project manager — @adveris</li>
+          <li>-Developer — @neueweb</li>
+          <li>-Art direction — @mamamusicandconvention</li>
+          <li>-Art direction + development — @bleu.mercure</li>
+          <li>-Art direction + development — @riadra_org</li>
         </ul>
       </section>
 
@@ -96,6 +96,10 @@
   }
 }
 
+ul{
+  list-style: none;
+  padding:0
+}
 
   @media screen and (max-width: 700px) {
 #about{
