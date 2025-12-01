@@ -336,8 +336,8 @@ export default {
   border-radius: 5px;
   min-height: 60px;
 
-  max-width: 440px;
-  width: calc(100% - 32px);
+
+  width: 440px;
 
   font-family: "Lausanne 500", Lausanne, sans-serif;
   text-align: center;
@@ -353,6 +353,9 @@ export default {
   .caption-fixed {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
     font-size: 14px;
+    width: calc(100vw - 20px);
+    left:10px;
+    transform: inherit;
   }
 }
 </style>
