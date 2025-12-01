@@ -243,18 +243,18 @@ export default {
 
     // Texte des captions, dans le même ordre que les slides (0 → 12)
     const captions = ref([
-      'Logo Branding',             // 0
-      'Various clothing design',   // 1
-      'Logo Branding',             // 2
-      'Logo Branding',             // 3
-      'Logo Branding',             // 4
-      'Logo Branding',             // 5
-      'Logo Branding',             // 6
-      'Logo Branding',             // 7
-      'Branding Experimentation',  // 8
-      'Logo Branding',             // 9
-      'Logo Branding',             // 10
-      'Logo Branding',             // 11 (vince_tv)
+      'Logo & type design',             // 0
+      'Various clothing design & 3D render ',   // 1
+      'Logo design',             // 2
+      'Logo design & 3D render',             // 3
+      'Logo design & 3D render',             // 4
+      'Various artworks',             // 5
+      'Branding',             // 6
+      'Branding & artworks',             // 7
+      'Shapes experiment',  // 8
+      'Logo design',             // 9
+      'Logo design & 3D render',             // 10
+      'Content design',             // 11 (vince_tv)
       'Content Production',        // 12 (vince_insta)
     ]);
 

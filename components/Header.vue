@@ -222,7 +222,7 @@ border-radius: 5px;
     align-items: center;
     font-family: "Lausanne 500";
   }
-    .overlay-menu {
+    .overlay-menu-2 {
     position: fixed;
     top: 150px;
     left: 10px;
