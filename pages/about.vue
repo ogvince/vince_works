@@ -95,4 +95,16 @@
     }
   }
 }
+
+
+  @media screen and (max-width: 700px) {
+#about{
+  .container{
+    width: 100%;
+    padding-left:10px;
+    padding-right: 10px;
+  }
+}
+
+  }
 </style>
