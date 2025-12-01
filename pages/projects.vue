@@ -1,229 +1,232 @@
 <template>
-  <swiper
-  :loop="true"
-  :modules="modules"
-  :mousewheel="true"
-  :keyboard="{
-    enabled: true,
-  }"
-  :breakpoints="{
-    '0': {
-      direction: 'vertical',
-    },
-    '900': {
-      direction: 'horizontal',
-    }
-  }"
-  effect="fade">
-  <swiper-slide style="background:#c3c3c3">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/2000.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <div class="hero-swiper">
+    <swiper
+      :loop="true"
+      :modules="modules"
+      :mousewheel="true"
+      :keyboard="{ enabled: true }"
+      :breakpoints="{
+        '0': {
+          direction: 'vertical',
+        },
+        '900': {
+          direction: 'horizontal',
+        }
+      }"
+      effect="fade"
+      @slideChange="onSlideChange"
+    >
+      <!-- 0 -->
+      <swiper-slide style="background:#c3c3c3">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/2000.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-    <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/bm.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Various clothing design</div>
-
-  </swiper-slide>
-
-<swiper-slide style="background:#84b176">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/nokia.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-
- <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/cphr.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-
-
-  
- <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/cphr2.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-
- <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/dzt.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-  <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/neueweb.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-    <swiper-slide style="background:white">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/advena.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Logo Branding</div>
-
-  </swiper-slide>
-
-    <swiper-slide style="background:white">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/shapes.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-    <div class="caption">Branding Experimentation</div>
-
-  </swiper-slide>
-
+      <!-- 1 -->
       <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/wecg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/bm.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-    <div class="caption">Logo Branding</div>
+      <!-- 2 -->
+      <swiper-slide style="background:#84b176">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/nokia.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-  </swiper-slide>
+      <!-- 3 -->
+      <swiper-slide style="background:black">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/cphr.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-   <swiper-slide style="background:black">
-   <video
-  autoplay
-  muted
-  loop
-  playsinline
-  webkit-playsinline
-  class="intro-video"
->
-      <source src="/videos/0109.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+      <!-- 4 -->
+      <swiper-slide style="background:black">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/cphr2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-    <div class="caption">Logo Branding</div>
+      <!-- 5 -->
+      <swiper-slide style="background:black">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/dzt.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-  </swiper-slide>
+      <!-- 6 -->
+      <swiper-slide style="background:black">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/neueweb.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-  
-  <swiper-slide>
-    <img src="/images/projects/vince_tv.jpg"/>
-     <div class="caption">Logo Branding</div>
-  </swiper-slide>
+      <!-- 7 -->
+      <swiper-slide style="background:white">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/advena.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
+      <!-- 8 -->
+      <swiper-slide style="background:white">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/shapes.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
-  <swiper-slide>
-    <img src="/images/projects/vince_insta.jpg"/>
-     <div class="caption">Content Production</div>
-  </swiper-slide>
-  
+      <!-- 9 -->
+      <swiper-slide style="background:black">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/wecg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
 
+      <!-- 10 -->
+      <swiper-slide style="background:black">
+        <div class="slide-inner">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+            class="intro-video"
+          >
+            <source src="/videos/0109.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </swiper-slide>
+
+      <!-- 11 -->
+      <swiper-slide>
+        <div class="slide-inner">
+          <img src="/images/projects/vince_tv.jpg" />
+        </div>
+      </swiper-slide>
+
+      <!-- 12 -->
+      <swiper-slide>
+        <div class="slide-inner">
+          <img src="/images/projects/vince_insta.jpg" />
+        </div>
+      </swiper-slide>
     </swiper>
-  </template>
+
+    <!-- CAPTION FIXE LIÉ AU SLIDE ACTIF -->
+    <div class="caption-fixed">
+      {{ captions[activeIndex] }}
+    </div>
+  </div>
+</template>
+
 <script>
-import { onMounted, onBeforeUnmount } from 'vue';
+import { ref } from 'vue';
 import { Mousewheel, Keyboard, Autoplay, EffectFade } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
@@ -238,88 +241,121 @@ export default {
   setup() {
     const modules = [Mousewheel, Keyboard, Autoplay, EffectFade];
 
-    const setVH = () => {
-      const vh = (window.visualViewport?.height || window.innerHeight) * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    // Texte des captions, dans le même ordre que les slides (0 → 12)
+    const captions = ref([
+      'Logo Branding',             // 0
+      'Various clothing design',   // 1
+      'Logo Branding',             // 2
+      'Logo Branding',             // 3
+      'Logo Branding',             // 4
+      'Logo Branding',             // 5
+      'Logo Branding',             // 6
+      'Logo Branding',             // 7
+      'Branding Experimentation',  // 8
+      'Logo Branding',             // 9
+      'Logo Branding',             // 10
+      'Logo Branding',             // 11 (vince_tv)
+      'Content Production',        // 12 (vince_insta)
+    ]);
+
+    const activeIndex = ref(0);
+
+    const onSlideChange = (swiper) => {
+      // avec loop: true, on utilise realIndex pour ignorer les duplicats internes
+      activeIndex.value = swiper.realIndex;
     };
 
-    onMounted(() => {
-      setVH();
-      window.addEventListener('resize', setVH);
-    });
-
-    onBeforeUnmount(() => {
-      window.removeEventListener('resize', setVH);
-    });
-
-    return { modules };
+    return {
+      modules,
+      captions,
+      activeIndex,
+      onSlideChange,
+    };
   },
 };
 </script>
 
-
 <style lang="scss">
-.swiper{
+.hero-swiper {
   width: 100vw;
-  height: calc(var(--vh, 1vh) * 100);
-  .swiper-slide {
-   width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    img{
-      width: 100%;
-      height:100%;
-      object-fit:cover;
-    }
-    video{
-      height:100%;
-      width: auto;
-      color:white;
-      pointer-events: none;
-    }
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
+
+@supports (height: 100dvh) {
+  .hero-swiper {
+    height: 100dvh;
+  }
 }
-.swiper-slide .caption {
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.slide-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Background vidéo / image dans le slide */
+.slide-inner video,
+.slide-inner img {
   position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 16px; // ou un peu plus si tu veux
-  min-height: 48px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-  background: #F2F2F2;
+.intro-video {
+  pointer-events: none; /* évite les interactions qui forcent le plein écran */
+}
+
+/* Caption FIXE lié au slide actif */
+.caption-fixed {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  /* on le remonte bien au-dessus de la barre du navigateur */
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+
+  background: #f2f2f2;
   border-radius: 5px;
-  padding: 8px 12px;
-  text-align: center;
+  min-height: 48px;
+  padding: 10px 18px;
 
+  max-width: 440px;
+  width: calc(100% - 32px);
+
+  font-family: "Lausanne 500", Lausanne, sans-serif;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  z-index: 2;
+  z-index: 9999;
 }
 
-
-@media screen and (max-width: 700px){
-  .swiper-slide video {
-    height: auto !important;
-    width: 100% !important;
-    z-index: 900 !important;
+/* Mobile : on peut le remonter encore un peu si tu veux */
+@media screen and (max-width: 700px) {
+  .caption-fixed {
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    font-size: 14px;
+    padding: 10px 14px;
   }
-
-  .swiper-slide .caption {
-    position: absolute;
-    bottom: 20px; 
-    width: calc(100vw - 20px);
-    height: 60px;
-
-    background: #F2F2F2;
-    z-index: 999 !important;
-  }
-
-
-
 }
 </style>

@@ -43,7 +43,7 @@
 
 
           <div v-if="menuOpen" class="overlay-menu" @click="closeAll">
-            <NuxtLink to='/projects'>Art + Print + Web</NuxtLink>
+            <NuxtLink to='/projects'>Portfolio</NuxtLink>
           </div>
 
           <div v-if="mailOpen" class="overlay-menu">

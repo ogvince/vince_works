@@ -59,7 +59,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: white;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +75,7 @@
     opacity: 1;
     svg{
       path{
-        fill:black
+        fill:white
       }
     }
   }
