@@ -43,7 +43,10 @@
 
 
           <div v-if="menuOpen" class="overlay-menu" @click="closeAll">
-            <NuxtLink to='/projects'>Portfolio</NuxtLink>
+            <NuxtLink to='/projects'>Projects</NuxtLink>
+          </div>
+            <div v-if="menuOpen" class="overlay-menu-2" @click="closeAll">
+            <NuxtLink to='/about'>About</NuxtLink>
           </div>
 
           <div v-if="mailOpen" class="overlay-menu">
@@ -93,7 +96,7 @@ position:fixed;
 top:10px;
 left: calc(50vw - 220px);
 z-index: 1000;
-background: black;
+background: #161616;
 width: 440px;
 height:60px;
 border-radius: 5px;
@@ -177,6 +180,19 @@ border-radius: 5px;
     align-items: center;
     font-family: "Lausanne 500";
   }
+    .overlay-menu-2 {
+    position: fixed;
+    top: 150px;
+    left: calc(50vw - 220px);
+    width: 440px;
+    height:60px;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lausanne 500";
+  }
 
   #circle-logo{
     display: none;
@@ -206,6 +222,20 @@ border-radius: 5px;
     align-items: center;
     font-family: "Lausanne 500";
   }
+    .overlay-menu {
+    position: fixed;
+    top: 150px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    height:60px;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lausanne 500";
+  }
+  
 
   }
   @media screen and (max-width: 320px) {

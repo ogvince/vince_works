@@ -317,7 +317,6 @@ export default {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
 }
 
@@ -331,12 +330,11 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   /* on le remonte bien au-dessus de la barre du navigateur */
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
 
   background: #f2f2f2;
   border-radius: 5px;
-  min-height: 48px;
-  padding: 10px 18px;
+  min-height: 60px;
 
   max-width: 440px;
   width: calc(100% - 32px);
@@ -355,7 +353,6 @@ export default {
   .caption-fixed {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
     font-size: 14px;
-    padding: 10px 14px;
   }
 }
 </style>

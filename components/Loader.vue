@@ -59,7 +59,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: #161616;
     display: flex;
     justify-content: center;
     align-items: center;
