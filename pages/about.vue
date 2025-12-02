@@ -1,6 +1,7 @@
 <template>
   <section id="about">
     <div class="container">
+       <img src="/images/svg/vince.works_head-logo.svg" class="head"/>
       <section>
         <p>
           <strong>vince.works</strong> is the creative playground of a former web developer and
@@ -45,7 +46,7 @@
 
       <section>
         <p>
-          Alongside Vince.Works, I'm also building a <strong>screen printing workshop</strong>. I already work with a heat press and I’m exploring
+          Alongside vince.works, I'm also building a <strong>screen printing workshop</strong>. I already work with a heat press and I’m exploring
           plotter printing, with growing production contacts in Vietnam (notably @xfirevietnam).
         </p>
       </section>
@@ -59,14 +60,14 @@
         </p>
       </section>
 
-      <footer>
+
         <p>
           If you’re building something artistic, bold, or experimental and you think my style could
           fit —
         </p>
         <p><strong>let’s talk.</strong></p>
-        <a href="mailto:contact@vince.works">Contact me</a>
-      </footer>
+        <p><strong>hello@vince.works</strong></p>
+        <div style="width:10px; height:50px"></div>
     </div>
   </section>
 </template>
@@ -84,7 +85,7 @@
   height: 100vh;
   display: flex;
   padding-top:100px;
-  padding-bottom:100px;
+  padding-bottom: 200px!important;
   justify-content: center;
   text-align: justify;
   overflow-y:scroll;
@@ -93,6 +94,11 @@
     strong{
       font-family: "Lausanne 500";
     }
+        .head{
+  width: calc(0% + 360px);
+  left: calc(50% - 180px);
+  position:relative;
+  }
   }
 }
 
