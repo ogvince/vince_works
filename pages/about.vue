@@ -32,30 +32,29 @@
       <section>
         <p>Selected teams & collaborations :</p>
         <ul>
-          <li>-Art direction + development — @madandwomen</li>
-          <li>-Developer — @nemaprod</li>
-          <li>-Developer — @applecore</li>
-          <li>-Developer — @heidisparis</li>
-          <li>-Project manager — @adveris</li>
-          <li>-Developer — @neueweb</li>
-          <li>-Art direction — @mamamusicandconvention</li>
-          <li>-Art direction + development — @bleu.mercure</li>
-          <li>-Art direction + development — @riadra_org</li>
+          <li>-Art direction <a href="https://www.instagram.com/mamamusicandconvention/" target="_blank">@mamamusicandconvention</a></li>
+          <li>-Art direction + dev <a href="https://www.instagram.com/madandwomen/" target="_blank">@madandwomen</a></li>
+          <li>-Dev <a href="https://www.instagram.com/nemaprod/" target="_blank">@nemaprod</a></li>
+          <li>-Dev <a href="https://www.instagram.com/applecore/" target="_blank">@applecore</a></li>
+          <li>-Dev <a href="https://www.instagram.com/heidisparis/" target="_blank">@heidisparis</a></li>
+          <li>-Project manager — <a href="https://www.instagram.com/adveris_paris/" target="_blank">@adveris</a></li>
+          <li>-Dev <a href="https://www.instagram.com/neueweb/" target="_blank">@neueweb</a></li>
+          <li>-Art direction + dev <a href="https://www.instagram.com/bleu.mercure/" target="_blank">@bleu.mercure</a></li>
         </ul>
       </section>
 
       <section>
         <p>
           Alongside vince.works, I'm also building a <strong>screen printing workshop</strong>. I already work with a heat press and I’m exploring
-          plotter printing, with growing production contacts in Vietnam (notably @xfirevietnam).
+          plotter printing, with growing production contacts in Vietnam.
         </p>
       </section>
 
       <section>
         <p>
           I split my time between my full-time job, training, and this creative brand — working a
-          couple of hours on weekdays and fully dedicating my weekends to the studio. Vince.Works is
-          the space where I reconnect with what made me love creating in the first place: <strong>designing
+          couple of hours on weekdays and fully dedicating my weekends to the studio. This is
+          my space where I reconnect with what made me love creating in the first place: <strong>designing
           with intention, crafting visuals by hand, and collaborating on projects that carry a soul</strong>.
         </p>
       </section>
@@ -104,7 +103,12 @@
 
 ul{
   list-style: none;
-  padding:0
+  padding:0;
+  li{
+    a{
+      color:white
+    }
+  }
 }
 
   @media screen and (max-width: 700px) {
