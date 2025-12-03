@@ -295,7 +295,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/mobile/shapes_mobile.mp4" type="video/mp4" />
+              <source src="/videos/shapes.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -328,7 +328,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/mobile/wecg_mobile.mp4" type="video/mp4" />
+              <source src="/videos/wecg.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -361,7 +361,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/mobile/0109_mobile.mp4" type="video/mp4" />
+              <source src="/videos/0109.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
