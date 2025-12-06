@@ -17,6 +17,75 @@
       @slideChange="onSlideChange"
     >
       <!-- 0 -->
+             <swiper-slide style="background:#black">
+        <div class="slide-inner">
+          <template v-if="hydrated">
+            <!-- Mobile -->
+            <video
+              v-if="isMobile"
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              class="intro-video"
+            >
+              <source src="/videos/mxm.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Desktop -->
+            <video
+              v-else
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              class="intro-video"
+            >
+              <source src="/videos/mxm.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </template>
+        </div>
+      </swiper-slide>
+
+      <swiper-slide style="background:#black">
+        <div class="slide-inner">
+          <template v-if="hydrated">
+            <!-- Mobile -->
+            <video
+              v-if="isMobile"
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              class="intro-video"
+            >
+              <source src="/videos/clearwave.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Desktop -->
+            <video
+              v-else
+              autoplay
+              muted
+              loop
+              playsinline
+              webkit-playsinline
+              class="intro-video"
+            >
+              <source src="/videos/clearwave.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </template>
+        </div>
+      </swiper-slide>
+
+
       <swiper-slide style="background:#c3c3c3">
         <div class="slide-inner">
           <template v-if="hydrated">
@@ -130,7 +199,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/cphr.mp4" type="video/mp4" />
+              <source src="/videos/cphrm.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -163,7 +232,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/cphr2.mp4" type="video/mp4" />
+              <source src="/videos/cphr2m.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -295,7 +364,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/shapes.mp4" type="video/mp4" />
+              <source src="/videos/shapesm.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -328,7 +397,7 @@
               webkit-playsinline
               class="intro-video"
             >
-              <source src="/videos/wecg.mp4" type="video/mp4" />
+              <source src="/videos/wecgm.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -348,58 +417,13 @@
         </div>
       </swiper-slide>
 
-      <!-- 10 -->
-      <swiper-slide style="background:black">
-        <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/0109.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
 
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/0109.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
-        </div>
-      </swiper-slide>
-
-      <!-- 11 -->
-      <swiper-slide>
-        <div class="slide-inner">
-          <img src="/images/projects/vince_tv.jpg" />
-        </div>
-      </swiper-slide>
-
-      <!-- 12 -->
-      <swiper-slide>
-        <div class="slide-inner">
-          <img src="/images/projects/vince_insta.jpg" />
-        </div>
-      </swiper-slide>
     </swiper>
 
     <!-- CAPTION FIXE LIÉ AU SLIDE ACTIF -->
-    <div class="caption-fixed">
-      {{ captions[activeIndex] }}
-    </div>
+<div class="caption-fixed" v-if="captions[activeIndex]">
+  <strong>{{ captions[activeIndex].title }}</strong><span>{{ captions[activeIndex].desc }}</span>
+</div>
   </div>
 </template>
 
@@ -442,22 +466,21 @@ export default {
       }
     });
 
-    // --- Captions ---
-    const captions = ref([
-      'Logo & type design',                   // 0
-      'Various clothing design & 3D render ', // 1
-      'Logo design',                          // 2
-      'Logo design & 3D render',              // 3
-      'Logo design & 3D render',              // 4
-      'Various artworks',                     // 5
-      'Branding',                             // 6
-      'Branding & artworks',                  // 7
-      'Shapes experiment',                    // 8
-      'Logo design',                          // 9
-      'Logo design & 3D render',              // 10
-      'Content design',                       // 11
-      'Content Production',                   // 12
-    ]);
+ const captions = ref([
+  { title: 'MXM®', desc: '3D Chrome Experiment' },
+  { title: 'ClearWaveTM', desc: '3D Glass Experiment' },
+  { title: '2000+®', desc: 'Type & Logo Design' },
+  { title: 'Bleu Mercure®', desc: 'Various clothing designs' },
+  { title: 'Obsidian Factory', desc: 'Pixel art logo design' },
+  { title: 'CPHR®', desc: 'Logo design & 3D Render' },
+  { title: 'CPHR®', desc: 'Logo design & 3D Render' },
+  { title: 'DZT', desc: 'Various Type Beat Artworks' },
+  { title: 'Neueweb®', desc: 'Branding' },
+  { title: 'Advena', desc: 'Golden ratio logo design' },
+  { title: 'Shapes', desc: 'Digital shape exploration' },
+  { title: 'WECG', desc: 'Logo Design' },
+]);
+
 
     const activeIndex = ref(0);
 
@@ -538,8 +561,6 @@ export default {
   border-radius: 5px;
   min-height: 60px;
   width: 440px;
-
-  font-family: "Lausanne 500", Lausanne, sans-serif;
   text-align: center;
   display: flex;
   align-items: center;
@@ -547,6 +568,9 @@ export default {
 
   z-index: 9999;
 }
+
+.caption-fixed strong { font-family: "Lausanne 500"; margin-right: 20px; }
+.caption-fixed span {   font-family: "Lausanne 300"; }
 
 @media screen and (max-width: 700px) {
   .caption-fixed {

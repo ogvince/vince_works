@@ -66,7 +66,7 @@
         </p>
         <p><strong>let’s talk.</strong></p>
         <p><strong>hello@vince.works</strong></p>
-        <div style="width:10px; height:50px"></div>
+        <div style="width:10px; height:200px"></div>
     </div>
   </section>
 </template>
