@@ -1,5 +1,5 @@
-import { ref, onMounted, onUnmounted } from 'vue';
-import Bowser from "bowser";
+import { onMounted, onUnmounted, ref } from 'vue';
+import Bowser from 'bowser';
 
 export function useDevice() {
   const windowWidth = ref(0);
@@ -8,14 +8,15 @@ export function useDevice() {
   const browserName = ref('');
 
   const updateDimensions = () => {
+    if (typeof window === 'undefined') return;
     windowWidth.value = window.innerWidth;
     windowHeight.value = window.innerHeight;
   };
 
   onMounted(() => {
+    if (typeof window === 'undefined') return;
     const parser = Bowser.getParser(window.navigator.userAgent);
-    windowWidth.value = window.innerWidth;
-    windowHeight.value = window.innerHeight;
+    updateDimensions();
     deviceType.value = parser.getPlatformType();
     browserName.value = parser.getBrowserName();
 
@@ -23,6 +24,7 @@ export function useDevice() {
   });
 
   onUnmounted(() => {
+    if (typeof window === 'undefined') return;
     window.removeEventListener('resize', updateDimensions);
   });
 
@@ -30,6 +32,6 @@ export function useDevice() {
     windowWidth,
     windowHeight,
     deviceType,
-    browserName
-  }
+    browserName,
+  };
 }
