@@ -1,0 +1,6 @@
+[build]
+  command = "yarn build"
+  publish = "dist" # ou ".output/public" ou ce que ton projet utilise
+
+[build.environment]
+  NODE_VERSION = "18"
