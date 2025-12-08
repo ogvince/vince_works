@@ -1,19 +1,16 @@
 <template>
-  <div class="hero-swiper">
+  <div class="hero-swiper" @wheel.prevent="onWheel">
     <swiper
       :loop="true"
       :modules="modules"
-      :mousewheel="true"
+      :mousewheel="false"
       :keyboard="{ enabled: true }"
       :breakpoints="{
-        '0': {
-          direction: 'vertical',
-        },
-        '900': {
-          direction: 'horizontal',
-        }
+        '0': { direction: 'vertical' },
+        '900': { direction: 'vertical' }
       }"
       effect="fade"
+      @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
       <!-- 0 - MXM -->
@@ -402,6 +399,37 @@ export default {
       }
     });
 
+    // --- Swiper instance & scroll handler (desktop) ---
+    const swiperInstance = ref(null);
+    const onSwiper = (swiper) => {
+      swiperInstance.value = swiper;
+    };
+
+    const isScrolling = ref(false);
+    const SCROLL_LOCK_MS = 700; // durée pendant laquelle on ignore les scrolls suivants
+
+    const onWheel = (event) => {
+      if (!swiperInstance.value) return;
+      if (isScrolling.value) return;
+
+      const delta = event.deltaY || 0;
+
+      // petit mouvement → on ignore
+      if (Math.abs(delta) < 20) return;
+
+      isScrolling.value = true;
+
+      if (delta > 0) {
+        swiperInstance.value.slideNext();
+      } else {
+        swiperInstance.value.slidePrev();
+      }
+
+      setTimeout(() => {
+        isScrolling.value = false;
+      }, SCROLL_LOCK_MS);
+    };
+
     const captions = ref([
       { title: 'MXM®', desc: '3D Chrome Experiment' },
       { title: 'ClearWave™', desc: '3D Glass Experiment' },
@@ -419,7 +447,7 @@ export default {
 
     const activeIndex = ref(0);
 
-    const onSlideChange = swiper => {
+    const onSlideChange = (swiper) => {
       activeIndex.value = swiper.realIndex;
     };
 
@@ -430,6 +458,9 @@ export default {
       onSlideChange,
       hydrated,
       isMobile,
+      swiperInstance,
+      onSwiper,
+      onWheel,
     };
   },
 };
@@ -441,6 +472,7 @@ export default {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  overscroll-behavior: none; /* évite le rebond / scroll du viewport */
 }
 
 @supports (height: 100dvh) {
@@ -478,7 +510,7 @@ export default {
   height: 100%;
   object-fit: cover;
   display: block;
-  pointer-events: none; /* clé : aucune interaction possible → pas de plein écran */
+  pointer-events: none; /* aucune interaction possible → pas de plein écran */
   z-index: 0;
 }
 
@@ -511,8 +543,7 @@ export default {
 }
 
 @media screen and (max-width: 700px) {
-
-  .bg-video{
+  .bg-video {
     object-fit: contain;
   }
 

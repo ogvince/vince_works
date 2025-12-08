@@ -79,7 +79,7 @@
     };
   </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 
 .fade-enter-active, .fade-leave-active {
@@ -256,5 +256,13 @@ header{
   }
 
 
+
+  html, body {
+  height: 100%;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
  
   </style>
