@@ -511,6 +511,11 @@ export default {
 }
 
 @media screen and (max-width: 700px) {
+
+  .bg-video{
+    object-fit: contain;
+  }
+
   .caption-fixed {
     bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
     font-size: 14px;

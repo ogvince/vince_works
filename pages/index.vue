@@ -100,4 +100,10 @@ const modules = [Mousewheel, Keyboard, Autoplay, EffectFade];
   pointer-events: none; /* ⬅️ empêche tout clic et plein écran */
   z-index: 0;
 }
+
+@media screen and (min-width: 700px){
+  .bg-video{
+    object-fit: contain;
+  }
+}
 </style>
