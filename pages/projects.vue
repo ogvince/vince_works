@@ -16,414 +16,350 @@
       effect="fade"
       @slideChange="onSlideChange"
     >
-      <!-- 0 -->
-             <swiper-slide style="background:#black">
+      <!-- 0 - MXM -->
+      <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <!-- Mobile -->
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/mxm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <!-- Desktop -->
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/mxm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <!-- Mobile -->
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/mxm.mp4" type="video/mp4" />
+          </video>
+          <!-- Desktop -->
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/mxm.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <swiper-slide style="background:#black">
+      <!-- 1 - ClearWave -->
+      <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <!-- Mobile -->
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/clearwave.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <!-- Desktop -->
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/clearwave.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/clearwave.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/clearwave.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-
+      <!-- 2 - 2000 -->
       <swiper-slide style="background:#c3c3c3">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <!-- Mobile -->
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/2000m.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <!-- Desktop -->
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/2000.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/2000m.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/2000.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 1 -->
+      <!-- 3 - Bleu Mercure -->
       <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/bm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/bm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/bm.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/bm.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 2 -->
+      <!-- 4 - Nokia -->
       <swiper-slide style="background:#84b176">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/nokia.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/nokia.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/nokia.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/nokia.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 3 -->
+      <!-- 5 - CPHR (M) -->
       <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/cphrm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/cphr.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/cphrm.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/cphr.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 4 -->
+      <!-- 6 - CPHR 2 -->
       <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/cphr2m.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/cphr2.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/cphr2m.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/cphr2.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 5 -->
+      <!-- 7 - DZT -->
       <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/dztm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/dzt.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/dztm.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/dzt.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 6 -->
+      <!-- 8 - Neueweb -->
       <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/neuewebm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/neueweb.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/neuewebm.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/neueweb.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 7 -->
+      <!-- 9 - Advena -->
       <swiper-slide style="background:white">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/advenam.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/advena.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/advenam.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/advena.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 8 -->
+      <!-- 10 - Shapes -->
       <swiper-slide style="background:white">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/shapesm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/shapes.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/shapesm.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/shapes.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
 
-      <!-- 9 -->
+      <!-- 11 - WECG -->
       <swiper-slide style="background:black">
         <div class="slide-inner">
-          <template v-if="hydrated">
-            <video
-              v-if="isMobile"
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/wecgm.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            <video
-              v-else
-              autoplay
-              muted
-              loop
-              playsinline
-              webkit-playsinline
-              class="intro-video"
-            >
-              <source src="/videos/wecg.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </template>
+          <video
+            v-if="hydrated && isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/wecgm.mp4" type="video/mp4" />
+          </video>
+          <video
+            v-else-if="hydrated && !isMobile"
+            class="bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline
+          >
+            <source src="/videos/wecg.mp4" type="video/mp4" />
+          </video>
         </div>
       </swiper-slide>
-
-
     </swiper>
 
     <!-- CAPTION FIXE LIÉ AU SLIDE ACTIF -->
-<div class="caption-fixed" v-if="captions[activeIndex]">
-  <strong>{{ captions[activeIndex].title }}</strong><span>{{ captions[activeIndex].desc }}</span>
-</div>
+    <div class="caption-fixed" v-if="captions[activeIndex]">
+      <strong>{{ captions[activeIndex].title }}</strong>
+      <span>{{ captions[activeIndex].desc }}</span>
+    </div>
   </div>
 </template>
 
@@ -444,8 +380,8 @@ export default {
     const modules = [Mousewheel, Keyboard, Autoplay, EffectFade];
 
     // --- Détection largeur (simple & SSR-safe) ---
-    const hydrated = ref(false);       // vrai uniquement côté client après mount
-    const width = ref(1024);           // valeur par défaut côté SSR
+    const hydrated = ref(false);
+    const width = ref(1024);
     const isMobile = computed(() => width.value < 700);
 
     const updateWidth = () => {
@@ -466,21 +402,20 @@ export default {
       }
     });
 
- const captions = ref([
-  { title: 'MXM®', desc: '3D Chrome Experiment' },
-  { title: 'ClearWaveTM', desc: '3D Glass Experiment' },
-  { title: '2000+®', desc: 'Type & Logo Design' },
-  { title: 'Bleu Mercure®', desc: 'Various clothing designs' },
-  { title: 'Obsidian Factory', desc: 'Pixel art logo design' },
-  { title: 'CPHR®', desc: 'Logo design & 3D Render' },
-  { title: 'CPHR®', desc: 'Logo design & 3D Render' },
-  { title: 'DZT', desc: 'Various Type Beat Artworks' },
-  { title: 'Neueweb®', desc: 'Branding' },
-  { title: 'Advena', desc: 'Golden ratio logo design' },
-  { title: 'Shapes', desc: 'Digital shape exploration' },
-  { title: 'WECG', desc: 'Logo Design' },
-]);
-
+    const captions = ref([
+      { title: 'MXM®', desc: '3D Chrome Experiment' },
+      { title: 'ClearWave™', desc: '3D Glass Experiment' },
+      { title: '2000+®', desc: 'Type & Logo Design' },
+      { title: 'Bleu Mercure®', desc: 'Various clothing designs' },
+      { title: 'Obsidian Factory', desc: 'Pixel art logo design' },
+      { title: 'CPHR®', desc: 'Logo design & 3D Render' },
+      { title: 'CPHR®', desc: 'Logo design & 3D Render' },
+      { title: 'DZT', desc: 'Various Type Beat Artworks' },
+      { title: 'Neueweb®', desc: 'Branding' },
+      { title: 'Advena', desc: 'Golden ratio logo design' },
+      { title: 'Shapes', desc: 'Digital shape exploration' },
+      { title: 'WECG', desc: 'Logo Design' },
+    ]);
 
     const activeIndex = ref(0);
 
@@ -535,19 +470,16 @@ export default {
   overflow: hidden;
 }
 
-/* Background vidéo / image dans le slide */
-.slide-inner video,
-.slide-inner img {
+/* Vidéo de background */
+.bg-video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-.intro-video {
-  pointer-events: none; /* évite les interactions qui forcent le plein écran */
+  pointer-events: none; /* clé : aucune interaction possible → pas de plein écran */
+  z-index: 0;
 }
 
 /* Caption FIXE lié au slide actif */
@@ -562,15 +494,21 @@ export default {
   min-height: 60px;
   width: 440px;
   text-align: center;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
 
   z-index: 9999;
 }
 
-.caption-fixed strong { font-family: "Lausanne 500"; margin-right: 20px; }
-.caption-fixed span {   font-family: "Lausanne 300"; }
+.caption-fixed strong {
+  font-family: "Lausanne 500";
+}
+
+.caption-fixed span {
+  font-family: "Lausanne 300";
+}
 
 @media screen and (max-width: 700px) {
   .caption-fixed {
@@ -578,7 +516,9 @@ export default {
     font-size: 14px;
     width: calc(100vw - 20px);
     left: 10px;
-    transform: inherit;
+    transform: none;
+    justify-content: flex-start;
+    padding: 10px 14px;
   }
 }
 </style>
