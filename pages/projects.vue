@@ -96,7 +96,7 @@ const onSwiper = (swiper) => {
 };
 
 const isScrolling = ref(false);
-const SCROLL_LOCK_MS = 700; // évite les scrolls multiples trop rapprochés
+const SCROLL_LOCK_MS = 700;
 
 const onWheel = (event) => {
   if (!swiperInstance.value || isScrolling.value) return;
@@ -124,7 +124,7 @@ const onSlideChange = (swiper) => {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  overscroll-behavior: none; /* évite le rebond / scroll du viewport */
+  overscroll-behavior: none;
 
   @supports (height: 100dvh) {
     height: 100dvh;
@@ -152,6 +152,7 @@ const onSlideChange = (swiper) => {
   overflow: hidden;
 }
 
+/* Par défaut (mobile) : cover */
 .bg-video {
   position: absolute;
   inset: 0;
@@ -159,8 +160,18 @@ const onSlideChange = (swiper) => {
   height: 100%;
   display: block;
   object-fit: cover;
-  pointer-events: none; /* aucune interaction possible → pas de plein écran */
+  pointer-events: none;
   z-index: 0;
+}
+
+/* Desktop : on passe en "contain" → hauteur 100%, bandes sur les côtés si besoin */
+@media screen and (min-width: 900px) {
+  .bg-video {
+    object-fit: contain;
+    /* si tu veux t’assurer que les bords soient noirs :
+       background: black;
+    */
+  }
 }
 
 .caption-fixed {
@@ -191,7 +202,7 @@ const onSlideChange = (swiper) => {
 
 @media screen and (max-width: 700px) {
   .hero-swiper {
-    height: 100vh; // éviter 100dvh sur anciens devices
+    height: 100vh;
   }
 
   .caption-fixed {
