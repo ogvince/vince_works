@@ -61,7 +61,7 @@ const slides = [
   { id: 'nokia', background: '#84b176', mobileSrc: '/videos/nokia.mp4', desktopSrc: '/videos/nokia.mp4', title: 'Obsidian Factory', desc: 'Pixel art logo design' },
   { id: 'cphr-1', background: 'black', mobileSrc: '/videos/cphrm.mp4', desktopSrc: '/videos/cphr.mp4', title: 'CPHR®', desc: 'Logo design & 3D Render' },
   { id: 'cphr-2', background: 'black', mobileSrc: '/videos/cphr2m.mp4', desktopSrc: '/videos/cphr2.mp4', title: 'CPHR®', desc: 'Logo design & 3D Render' },
-  { id: 'dzt', background: 'black', mobileSrc: '/videos/dztm.mp4', desktopSrc: '/videos/dzt.mp4', title: 'DZT', desc: 'Various Type Beat Artworks' },
+  { id: 'dzt', background: 'black', mobileSrc: '/videos/dztm.mp4', desktopSrc: '/videos/dztm.mp4', title: 'DZT', desc: 'Various Type Beat Artworks' },
   { id: 'neueweb', background: 'black', mobileSrc: '/videos/neuewebm.mp4', desktopSrc: '/videos/neueweb.mp4', title: 'Neueweb®', desc: 'Branding' },
   { id: 'advena', background: 'white', mobileSrc: '/videos/advenam.mp4', desktopSrc: '/videos/advena.mp4', title: 'Advena', desc: 'Golden ratio logo design' },
   { id: 'shapes', background: 'white', mobileSrc: '/videos/shapesm.mp4', desktopSrc: '/videos/shapes.mp4', title: 'Shapes', desc: 'Digital shape exploration' },
