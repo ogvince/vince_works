@@ -1,6 +1,6 @@
 <template>
   <swiper
-    :loop="true"
+    :loop="false"
     :modules="modules"
     :mousewheel="true"
     :keyboard="{ enabled: true }"
