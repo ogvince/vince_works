@@ -32,12 +32,11 @@
       <section>
         <p>Selected teams & collaborations :</p>
         <ul>
-          <li>-Art direction <a href="https://www.instagram.com/mamamusicandconvention/" target="_blank">@mamafestival</a></li>
+          <li>-Motion Design @ <a href="https://www.instagram.com/mamamusicandconvention/" target="_blank">@mamafestival</a></li>
           <li>-Art direction + dev <a href="https://www.instagram.com/madandwomen/" target="_blank">@madandwomen</a></li>
           <li>-Dev <a href="https://www.instagram.com/nemaprod/" target="_blank">@nemaprod</a></li>
           <li>-Dev <a href="https://www.instagram.com/applecore/" target="_blank">@applecore</a></li>
-          <li>-Dev <a href="https://www.instagram.com/heidisparis/" target="_blank">@heidisparis</a></li>
-          <li>-Project manager <a href="https://www.instagram.com/adveris_paris/" target="_blank">@adveris</a></li>
+          <li>-Project management <a href="https://www.instagram.com/adveris_paris/" target="_blank">@adveris</a></li>
           <li>-Dev <a href="https://www.instagram.com/neueweb/" target="_blank">@neueweb</a></li>
           <li>-Art direction + dev <a href="https://www.instagram.com/bleu.mercure/" target="_blank">@bleumercure</a></li>
         </ul>
